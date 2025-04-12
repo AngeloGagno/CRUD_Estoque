@@ -1,6 +1,6 @@
-from backend.API.router import router
-from backend.database.database_conf import Config
-from backend.database.models import *
+from API.router import router
+from database.database_conf import Config
+from database.models import *
 from fastapi import FastAPI
 
 
