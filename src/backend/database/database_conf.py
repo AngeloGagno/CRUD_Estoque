@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from backend.utils import Utils
+from utils import Utils
 
 # Cria o motor do banco de dados, é o conecta com o banco
 class Config:

@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from backend.data_contract.schemas import EstoqueUpdate,EstoqueCreate
-from backend.database.models import Estoque
+from data_contract.schemas import EstoqueUpdate,EstoqueCreate
+from database.models import Estoque
 
 def get_item(db: Session,item_id: int):
     return db.query(Estoque).filter(Estoque.id_produto == item_id).first()

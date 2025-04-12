@@ -1,5 +1,5 @@
 [project]
-name = "backend"
+name = "frontend"
 version = "0.1.0"
 description = ""
 authors = [
@@ -7,13 +7,11 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "python-dotenv (>=1.1.0,<2.0.0)",
-    "pydantic (>=2.11.3,<3.0.0)",
-    "psycopg2-binary (>=2.9.10,<3.0.0)",
-    "sqlalchemy (>=2.0.40,<3.0.0)",
-    "fastapi[standard] (>=0.115.12,<0.116.0)",
-    "uvicorn (>=0.34.0,<0.35.0)",
+dependencies = [    
+    "requests (>=2.32.3,<3.0.0)",    
+    "streamlit (>=1.44.1,<2.0.0)",    
+    "pandas (>=2.2.3,<3.0.0)",
+    
 ]
 
 

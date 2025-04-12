@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from backend.database.database_conf import Config
-from backend.data_contract.schemas import EstoqueUpdate,EstoqueDelete,EstoqueCreate,EstoqueResponse
+from database.database_conf import Config
+from data_contract.schemas import EstoqueUpdate,EstoqueDelete,EstoqueCreate,EstoqueResponse
 from typing import List
-from backend.API.crud import (delete_item,get_item,get_items,create_item,update_item)
+from API.crud import (delete_item,get_item,get_items,create_item,update_item)
 
 router = APIRouter()
 config = Config()
