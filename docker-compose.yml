@@ -1,42 +1,29 @@
-version: '3.8'
-services:
-  postgres:
-    image: postgres:latest
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    env_file:
-      - .env
-    networks:
-      - mynetwork
+version: "3.9"
 
-  backend:
-    build: 
-      context: ./backend
+services:
+  fastapi-app:
+    build:
+      context: ./src/backend
       dockerfile: Dockerfile
-    volumes:
-      - ./backend:/app
-    environment:
-      DATABASE_URL: env_file
+    container_name: fastapi_app
     ports:
       - "8000:8000"
-    depends_on:
-      - postgres
-    networks:
-      - mynetwork
-
-  frontend:
-    build: 
-      context: ./frontend
-      dockerfile: Dockerfile
+    env_file:
+      - ./src/backend/.env
     volumes:
-      - ./frontend:/app
+      - ./src/backend/API:/app/API
+      - ./src/backend/database:/app/database
+      - ./src/backend/data_contract:/app/data_contract
+      - ./src/backend/utils.py:/app/utils.py
+
+  streamlit-frontend:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile
+    container_name: streamlit_frontend
     ports:
       - "8501:8501"
-    networks:
-      - mynetwork
-
-networks:
-  mynetwork:
-
-volumes:
-  postgres_data:
+    volumes:
+      - ./src/frontend:/app
+    depends_on:
+      - fastapi-app
