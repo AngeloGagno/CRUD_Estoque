@@ -2,6 +2,7 @@ import streamlit as st
 from utils import GenericClass
 class Home(GenericClass):
     def __init__(self):
+        '''Classe geradora da página de explicação de como o sistema funciona.'''
         st.set_page_config('Inicio',layout="centered",page_icon='📦')
 
     def run(self):
@@ -43,4 +44,5 @@ class Home(GenericClass):
         - Informe o **ID do item** e clique em **"Excluir"**
         - O item será removido permanentemente do sistema
         ''')
-Home().run()
+
+Home().run() # Função que executa o código da página

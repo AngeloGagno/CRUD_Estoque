@@ -1,6 +1,7 @@
 import streamlit as st
-import pandas as pd
+
 class GenericClass:
+    '''Classe com métodos uteis e compartilhados pelas páginas'''
     def __init__(self):
         st.set_page_config('Inicio',layout="wide",page_icon='📦')
 

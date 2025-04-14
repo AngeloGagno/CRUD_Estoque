@@ -4,7 +4,13 @@ from utils import Utils
 
 # Cria o motor do banco de dados, é o conecta com o banco
 class Config:
+    '''Configuração inicial do Banco de Dados - Criação de Engine(através da URL do Banco).
+            Métodos:
+                engine_creator: Instância que retorna a Engine do banco criada
+                get_db: Cria uma sessão no banco de dados para realização do processo de CRUD
+    '''
     def __init__(self):
+        
         self.engine = create_engine(Utils.db_url())
 
     def _start_session(self):

@@ -4,6 +4,7 @@ from utils import GenericClass
 
 
 class SelectItem(GenericClass):
+    '''Classe para a página de busca de itens no banco'''
     def __init__(self):
         super().__init__()
         self.run()
@@ -49,4 +50,4 @@ class SelectItem(GenericClass):
                 st.markdown("### Detalhes do Produto:")
                 st.json(item_data)
 
-SelectItem()
+SelectItem() # Função que executa o código da página
