@@ -1,4 +1,9 @@
 # Sistema de Gerenciamento de Estoque
+![Python](https://img.shields.io/badge/python-3.13-blue)
+![Streamlit](https://img.shields.io/badge/streamlit-latest-red)
+![SQLAlchemy](https://img.shields.io/badge/sqlalchemy-latest-orange)
+![Pydantic](https://img.shields.io/badge/pydantic-2.11-purple)
+![FastAPI](https://img.shields.io/badge/fastapi-0.115-green)
 
 Sistema completo de gerenciamento de estoque com operações CRUD, usando FastAPI para o backend e Streamlit para o frontend.
 
