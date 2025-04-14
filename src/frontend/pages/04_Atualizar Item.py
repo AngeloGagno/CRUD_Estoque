@@ -7,6 +7,7 @@ import requests
 from utils import GenericClass  # ajuste o nome do arquivo conforme necessário
 
 class AtualizarItemPage(GenericClass):
+    '''Classe que gera a página Atualizar do frontend'''
     def __init__(self):
         super().__init__()
         self.run()
@@ -53,4 +54,4 @@ class AtualizarItemPage(GenericClass):
             except Exception as e:
                 st.error(f"❌ Erro ao buscar dados: {e}")
 
-AtualizarItemPage()
+AtualizarItemPage() # Função que executa o código da página

@@ -10,10 +10,12 @@ config = Config()
 
 @router.get("/Estoque/", response_model=List[EstoqueResponse])
 def get_all_items(db: Session = Depends(config.get_db)):
+    '''Endpoint que exibe todos os items do banco'''
     return get_items(db)
 
 @router.get("/Estoque/{item_id}", response_model=EstoqueResponse)
 def get_a_single_item(item_id: int, db: Session = Depends(config.get_db)):
+    '''Endpoint que exibe apenas o dado solicitado pelo usuario baseando-se no item_id'''
     item = get_item(db, item_id=item_id)
     if item:
         return item
@@ -21,10 +23,12 @@ def get_a_single_item(item_id: int, db: Session = Depends(config.get_db)):
 
 @router.post("/Estoque/", response_model=EstoqueCreate)
 def create_one_item(item: EstoqueCreate, db: Session = Depends(config.get_db)):
+    '''Endpoint que permite criar novas inserções no banco'''
     return create_item(item=item, db=db)
 
 @router.delete("/Estoque/{item_id}", response_model=EstoqueDelete)
 def delete_one_item(item_id: int, db: Session = Depends(config.get_db)):
+    '''Endpoint que permite deletar um item com item_id especifico'''
     item = delete_item(item_id=item_id, db=db)
     if item:
         return item
@@ -32,6 +36,7 @@ def delete_one_item(item_id: int, db: Session = Depends(config.get_db)):
 
 @router.put("/Estoque/{item_id}", response_model=EstoqueUpdate)
 def update_one_item(item_id: int, item: EstoqueUpdate, db: Session = Depends(config.get_db)):
+    '''Endpoint para atualização de um item_id'''
     item = update_item(db=db, item_id=item_id, item=item)
     if item:
         return item

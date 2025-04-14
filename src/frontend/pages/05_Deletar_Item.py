@@ -3,6 +3,7 @@ import requests
 from utils import GenericClass  
 
 class DeletarItemPage(GenericClass):
+    '''Classe para instanciar a página de Delete de items do banco'''
     def __init__(self):
         super().__init__()
         self.run()
@@ -34,4 +35,4 @@ class DeletarItemPage(GenericClass):
                 except Exception as e:
                     st.error(f"❌ Erro ao buscar dados: {e}")
 
-DeletarItemPage()
+DeletarItemPage() # Função que executa o código da página

@@ -3,6 +3,7 @@ import requests
 from utils import GenericClass
 
 class View(GenericClass):
+    '''Classe para a página de visualização de todos os dados contidos no banco de dados'''
     def __init__(self):
         super().__init__()
         self.run()
@@ -35,4 +36,4 @@ class View(GenericClass):
         else:
             st.error("❌ Não foi possível carregar os dados.")
 
-View()
+View() # Função que executa o código da página

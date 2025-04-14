@@ -1,8 +1,9 @@
 import streamlit as st
 import requests
-from utils import GenericClass  # Ajuste o caminho se necessário
+from utils import GenericClass  
 
 class Create_item(GenericClass):
+    '''Classe para inserção um novo item no banco de dados.'''
     def __init__(self):
         super().__init__()
         self.run()
@@ -37,4 +38,4 @@ class Create_item(GenericClass):
                 except Exception as e:
                     st.error(f"🚫 Erro ao conectar com o backend: {e}")
 
-Create_item()
+Create_item() # Função que executa o código da página
