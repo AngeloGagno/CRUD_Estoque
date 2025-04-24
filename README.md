@@ -16,7 +16,7 @@ Sistema completo de gerenciamento de estoque com operações CRUD, usando FastAP
 
 1. Clone o repositório:
    ```
-   git clone https://github.com/seu-usuario/CRUD_Estoque.git
+   git clone https://github.com/angelogagno/CRUD_Estoque.git
    cd CRUD_Estoque
    ```
 
